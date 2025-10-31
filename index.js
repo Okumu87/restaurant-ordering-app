@@ -27,3 +27,10 @@ function renderMenu() {
 renderMenu();                    
 
 
+const addButtons = document.querySelectorAll('.btn-add');
+addButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        const itemId = this.getAttribute('data-id');
+        console.log('Item added with ID:', itemId);
+    });
+});
